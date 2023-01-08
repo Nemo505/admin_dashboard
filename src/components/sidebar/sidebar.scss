@@ -1,11 +1,11 @@
 .sidebar{
-    background-color: rgb(247, 185, 244);
+    background-color: azure;
     flex: 1;
-    border-right: 0.5px solid rgb(31, 110, 45);
+    border-right: 0.5px solid #2A363B;
     min-height: 100vh;
 
     .top{
-        background-color: azure;
+        background-color: #a4c7a6;
         height: 50px;
         display: flex;
         align-items: center;
@@ -14,13 +14,13 @@
         .logo{
             font-size: 20px;
             font-weight: bold;
-            color: rgb(31, 110, 45);
+            color: #2A363B;
         }
     }
 
     hr{
         height: 0;
-        border: 0.5px solid rgb(31, 110, 45);
+        border: 0.5px solid #2A363B;
     }
 
     .center{
@@ -29,6 +29,62 @@
             list-style: none;
             padding: 0;
             margin: 0;
+           
+            .title{
+                font-size: 20px;
+                font-weight: bold;
+                color: #2A363B;
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+
+            li{
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #99B89B;
+                }
+
+                .icon{
+                    font-size: 19px;
+                    color: #475a48;
+                }
+                span{
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #2A363B;
+                    margin-left: 10px;
+                }
+            }
         }
     }
+
+    .bottom{
+        display: flex;
+        align-items: center;
+        margin: 10px;
+
+        .colorOption{
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid #2A363B;
+            cursor: pointer;
+            margin: 5px;
+
+            &:nth-child(1){
+                background-color: rgb(255, 255, 255);
+            }
+            &:nth-child(2){
+                background-color: rgb(0, 0, 0);
+            }
+            &:nth-child(3){
+                background-color: rgb(238, 173, 206);
+            }
+        }
+    }
+
 }

@@ -1,0 +1,21 @@
+.navbar{
+    height: 50px;
+    border-bottom: 0.5px solid #2A363B;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #2A363B;
+
+    .wrapper{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #99B89B;
+
+        .items{
+            display: flex;
+        }
+    }
+}
