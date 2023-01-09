@@ -1,7 +1,7 @@
 import "./navbar.scss"
 import SearchIcon from '@mui/icons-material/Search';
 import LanguageIcon from '@mui/icons-material/Language';
-import ModeNightIcon from '@mui/icons-material/ModeNight';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
@@ -17,20 +17,25 @@ const Navbar = () => {
 
         <div className="items">
           <div className="item">
-            <LanguageIcon />
+            <LanguageIcon className="icon" />
             English
           </div>
           <div className="item">
-            <ModeNightIcon />
+            <Brightness4Icon className="icon" />
           </div>
           <div className="item">
-            <NotificationsActiveIcon />
+            <NotificationsActiveIcon className="icon" />
+            <div className="counter">1</div>
           </div>
           <div className="item">
-            <ChatBubbleOutlineIcon />
+            <ChatBubbleOutlineIcon className="icon" />
+            <div className="counter">2</div>
           </div>
           <div className="item">
-            <FormatListBulletedIcon />
+            <FormatListBulletedIcon className="icon" />
+          </div>
+          <div className="item">
+            <img src="https://th.bing.com/th/id/OIP.RhwJPZ1lgIp3YpRRjYF3ZgHaEM?pid=ImgDet&rs=1" alt="avatar" className="avatar" />
           </div>
         </div>
 

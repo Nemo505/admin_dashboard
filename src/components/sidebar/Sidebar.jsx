@@ -40,6 +40,7 @@ const Sidebar = () => {
 
                 <p className="title">Useful</p>
                 <li>
+                    <HealthAndSafetyIcon className="icon" />
                     <span>Stats</span>
                 </li>
                 <li>
@@ -53,6 +54,7 @@ const Sidebar = () => {
                     <span>System Health</span>
                 </li>
                 <li>
+                    <HealthAndSafetyIcon className="icon" />
                     <span>Logs</span>
                 </li>
                 <li>

@@ -8,14 +8,66 @@
 
     .wrapper{
         width: 100%;
-        padding: 20px;
+        padding: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         background-color: #99B89B;
+        
+        .search{
+            display: flex;
+            align-items: center;
+            border: 0.5px solid white;
+            padding: 3px;
+            background: white;
+            border-radius: 5px;
+
+            input{
+                border: none;
+                outline: none;
+                background: transparent;
+
+                &::placeholder{
+                    font-size: 13px;
+                }
+            }
+        }
 
         .items{
             display: flex;
+            align-items: center;
+
+            .item{
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                position: relative;
+                
+                .icon{
+                   font-size: 20px; 
+                }
+                .avatar{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .counter{
+                    width: 15px;
+                    height: 15px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    color: black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                }
+            }
         }
     }
 }
