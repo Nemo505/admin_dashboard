@@ -8,15 +8,18 @@ import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
         <div className="top">
-            <img src="https://cdn4.iconfinder.com/data/icons/thanksgiving-add-on-flat/48/Thanksgiving_Add_-_On-09-512.png" 
-                alt="avatar" 
-                className='avatar' />
-            <div className="logo">Maple</div>
+            <Link to="/" style={{textDecoration: "none"}}>
+                <img src="https://cdn4.iconfinder.com/data/icons/thanksgiving-add-on-flat/48/Thanksgiving_Add_-_On-09-512.png" 
+                    alt="avatar" 
+                    className='avatar' />
+                <div className="logo">Maple</div>
+            </Link>
         </div>
         <hr />
         <div className="center">
@@ -28,18 +31,26 @@ const Sidebar = () => {
                 </li>
 
                 <p className="title">List</p>
-                <li>
-                    <PersonOutlineIcon className="icon" />
-                    <span>Users</span>
-                </li>
-                <li>
-                    <CategoryIcon className="icon" />
-                    <span>Products</span>
-                </li>
-                <li>
-                    <ShoppingCartIcon className="icon" />
-                    <span>Orders</span>
-                </li>
+                <Link to="/users" style={{textDecoration: "none"}}>
+                    <li>
+                        <PersonOutlineIcon className="icon" />
+                        <span>Users</span>
+                    </li>
+                </Link>
+
+                <Link to="/products" style={{textDecoration: "none"}}>
+                    <li>
+                        <CategoryIcon className="icon" />
+                        <span>Products</span>
+                    </li>
+                </Link>
+
+                <Link to="/orders" style={{textDecoration: "none"}}>
+                    <li>
+                        <ShoppingCartIcon className="icon" />
+                        <span>Orders</span>
+                    </li>
+                </Link>
 
                 <p className="title">Useful</p>
                 <li>
