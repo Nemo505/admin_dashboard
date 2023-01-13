@@ -2,21 +2,24 @@ import "./new.scss"
 import Sidebar from "../../components/sidebar/Sidebar"
 import Navbar from "../../components/navbar/Navbar"
 import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
+import { useState } from "react";
 
-const New = () => {
+const New = ({inputs, title}) => {
+  const [file, setFile] = useState("");
+
   return (
     <div className="new">
       <Sidebar/>
       <div className="newContainer">
         <Navbar/>
         <div className="top">
-          <h3>Add New User</h3>
+          <h3>{title}</h3>
         </div>
 
         <div className="bottom">
 
           <div className="left">
-            <img src="https://th.bing.com/th/id/OIP.vpU_KUELPRjvDl4PvY0xIAHaHa?pid=ImgDet&rs=1" 
+            <img src={file ? URL.createObjectURL(file) : "https://th.bing.com/th/id/OIP.vpU_KUELPRjvDl4PvY0xIAHaHa?pid=ImgDet&rs=1"} 
               alt="avatar" />
           </div>
 
@@ -25,45 +28,22 @@ const New = () => {
 
               <div className="formInput">
                 <label htmlFor="file">Image: <DriveFolderUploadIcon className="icon"/></label>
-                <input type="file"id="file" style={{display: "none"}} placeholder="kazue_shiroe" />
+                <input type="file"id="file"
+                  onChange={(e) => setFile(e.target.files[0])}
+                  style={{display: "none"}} />
               </div>
 
-              <div className="formInput">
-                <label htmlFor="">First Name</label>
-                <input type="text" placeholder="kazue_shiroe" />
-              </div>
+              {inputs.map((input) => (
 
-              <div className="formInput">
-                <label htmlFor="">Last Name</label>
-                <input type="text" placeholder="kazue_shiroe" />
-              </div>
+                <div className="formInput" key={input.id}>
+                  <label htmlFor="">{input.label}</label>
+                  <input type={input.type} placeholder={input.placeholder} />
+                </div>
 
-              <div className="formInput">
-                <label htmlFor="">Email</label>
-                <input type="text" placeholder="kazue@gmail.com" />
-              </div>
+              ))}
 
-              <div className="formInput">
-                <label htmlFor="">Phone</label>
-                <input type="text" placeholder="+1 02934" />
-              </div>
 
-              <div className="formInput">
-                <label htmlFor="">Password</label>
-                <input type="password" placeholder="11111" />
-              </div>
-
-              <div className="formInput">
-                <label htmlFor="">Address</label>
-                <input type="text" placeholder="129 st, NewYork" />
-              </div>
-
-              <div className="formInput">
-                <label htmlFor="">Country</label>
-                <input type="text" placeholder="USA" />
-              </div>
-
-              <button>Sned</button>
+              <button>Send</button>
 
             </form>
           </div>
