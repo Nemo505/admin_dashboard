@@ -1,0 +1,29 @@
+.table{
+    .cellWrapper{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    }
+
+    .status{
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+
+        &.Approved{
+            color: rgb(9, 105, 9);
+            background-color: rgb(121, 211, 151);
+        }
+
+        &.Pending{
+            color: rgb(167, 144, 15);
+            background-color: rgb(230, 218, 154);
+        }
+    }
+}

@@ -1,11 +1,9 @@
 import "./widget.scss" 
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
-import AddLinkOutlinedIcon from '@mui/icons-material/AddLinkOutlined';
 import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 import LocalAtmOutlinedIcon from '@mui/icons-material/LocalAtmOutlined';
-import { color } from "@mui/system";
 
 const Widget = ({ type }) => {
     let data;
