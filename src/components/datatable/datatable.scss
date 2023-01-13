@@ -20,15 +20,15 @@
         border-radius: 5px;
         
         &.active{
-            background-color: bisque;
-            color: black;
+            background-color: rgb(196, 255, 228);
+            color: green;
         }
         &.inactive{
-            background-color: red;
+            background-color: rgb(247, 195, 195);
             color: red;
         }
-        &pending{
-            background-color: gold;
+        &.pending{
+            background-color: rgb(250, 244, 209);
             color: gold;
         }
     }
@@ -41,8 +41,8 @@
         .viewButton{
             padding: 2px 5px;
             border-radius: 5px;
-            color: aqua;
-            border: 1px dotted darkblue;
+            color: rgb(41, 134, 77);
+            border: 1px dotted rgb(7, 34, 21);
         }
         .deleteButton{
             padding: 2px 5px;

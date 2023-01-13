@@ -3,38 +3,38 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 
 const data = [
   {
-    "name": "Jan",
+    "name": "01",
     "Total": 100,
   },
  
   {
-    "name": "Feb",
+    "name": "02",
     "Total": 120,
   },
  
   {
-    "name": "March",
+    "name": "03",
     "Total": 300,
   },
  
   {
-    "name": "Apirl",
+    "name": "04",
     "Total": 400,
   },
  
   {
-    "name": "June",
+    "name": "05",
     "Total": 300,
   },
  
 ]
 
 
-const Chart = () => {
+const Chart = ({aspect, title}) => {
   return (
     <div className='chart'>
-      <div className="title">Last 6 Months (Revenue)</div>
-      <ResponsiveContainer width="100%" aspect={2/1}>
+      <div className="title">{title}</div>
+      <ResponsiveContainer width="100%" aspect={aspect}>
       <AreaChart width={730} height={250} data={data}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
         <defs>

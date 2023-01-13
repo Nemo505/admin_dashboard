@@ -1,6 +1,6 @@
 export const userColumns = [
     { field: 'id', headerName: 'ID', width: 70 },
-    { field: "user", headerName: 'User', width: 230, renderCell: (params) => {
+    { field: 'user', headerName: 'User', width: 230, renderCell: (params) => {
         return (
             <div className="cellWithImg">
                 <img className="cellImg" src={params.row.img} alt="avatar"/>
@@ -40,7 +40,7 @@ export const userRows = [
         id: 135,
         username: "Iphone 10",
         img: "https://th.bing.com/th/id/OIP.XW_PF2CxwiCqTlaseXe6ZAAAAA?pid=ImgDet&rs=1",
-        status: "active",
+        status: "pending",
         email: "chyu@gmail.com",
         age: 30,
     }
