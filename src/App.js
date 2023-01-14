@@ -4,17 +4,11 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-import "./formsource"
-
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { userInputs, productInputs } from "./formsource";
 
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>

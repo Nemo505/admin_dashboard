@@ -14,10 +14,10 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
         <div className="top">
-            <Link to="/" style={{textDecoration: "none"}}>
                 <img src="https://cdn4.iconfinder.com/data/icons/thanksgiving-add-on-flat/48/Thanksgiving_Add_-_On-09-512.png" 
                     alt="avatar" 
                     className='avatar' />
+            <Link to="/" style={{textDecoration: "none"}}>
                 <div className="logo">Maple</div>
             </Link>
         </div>

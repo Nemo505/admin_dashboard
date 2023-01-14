@@ -4,11 +4,17 @@ import "./home.scss";
 import Widget from "../../components/widget/Widget";
 import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
-import Table from "../../components/table/Table"
+import Table from "../../components/table/Table";
+import "../../style/dark.scss"
+import { useState } from "react";
 
 const Home = () => {
+
+  const[white, setWhite] = useState(false);
+
   return (
-    <div className="home">
+    
+    <div className={white ? "home white" : "home"}>
         <Sidebar />
         <div className="homeContainer">
           <Navbar />
